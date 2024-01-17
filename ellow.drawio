@@ -1,0 +1,58 @@
+<mxfile host="app.diagrams.net" modified="2024-01-16T17:19:02.648Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0" etag="sbwC2vFN0wh-w456NQMt" version="21.6.8" type="device">
+  <diagram name="Page-1" id="wXzJF2E019Lvkn0R683R">
+    <mxGraphModel dx="1042" dy="639" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zAYO1hFMGAM5R5VX6SW2-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zAYO1hFMGAM5R5VX6SW2-1" target="zAYO1hFMGAM5R5VX6SW2-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="855" y="110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zAYO1hFMGAM5R5VX6SW2-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zAYO1hFMGAM5R5VX6SW2-1" target="zAYO1hFMGAM5R5VX6SW2-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zAYO1hFMGAM5R5VX6SW2-1" value="&lt;div&gt;Client Type: Determine if the user is a broker or a direct client.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="70" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zAYO1hFMGAM5R5VX6SW2-6" value="Transaction Type: Identify if it&#39;s a purchase or a refinance." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="280" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zAYO1hFMGAM5R5VX6SW2-11" value="&lt;div&gt;broker&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="160" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zAYO1hFMGAM5R5VX6SW2-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zAYO1hFMGAM5R5VX6SW2-18" target="zAYO1hFMGAM5R5VX6SW2-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zAYO1hFMGAM5R5VX6SW2-18" value="Use property address to gather specific information; if not available, guide based on property type assumptions." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="280" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zAYO1hFMGAM5R5VX6SW2-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="zAYO1hFMGAM5R5VX6SW2-23" target="zAYO1hFMGAM5R5VX6SW2-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zAYO1hFMGAM5R5VX6SW2-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="zAYO1hFMGAM5R5VX6SW2-23" target="zAYO1hFMGAM5R5VX6SW2-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zAYO1hFMGAM5R5VX6SW2-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zAYO1hFMGAM5R5VX6SW2-23" target="zAYO1hFMGAM5R5VX6SW2-30">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="260" />
+              <mxPoint x="565" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zAYO1hFMGAM5R5VX6SW2-23" value="&lt;div&gt;direct client.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="175" y="160" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zAYO1hFMGAM5R5VX6SW2-28" value="&lt;div&gt;Inquire if the borrower owns their primary residence and about their mortgage payment history.&lt;/div&gt;&lt;div&gt;If not, ask if they rent or live rent-free and determine first-time buyer status.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="440" width="150" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="zAYO1hFMGAM5R5VX6SW2-30" value="Ask if the borrower owns any other investment properties to gauge their investment experience." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="280" width="150" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
