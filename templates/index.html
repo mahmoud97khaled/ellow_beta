@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question Input</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        form {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            color: #666;
+            padding-left: 20px;
+        }
+        .question {
+            color: #007BFF;
+        }
+        .response {
+            color: #28a745;
+        }
+        .history {
+        padding-left: 20px;  /* Add padding to the left of the text */
+    }
+    </style>
+</head>
+<body>
+    <form method="POST">
+        <label for="question">Enter your question:</label><br>
+        <input type="text" id="question" name="question"><br>
+        <input type="submit" value="Send">
+    </form>
+    <form method="POST" action="/clear">
+        <input type="submit" value="Clear Conversation">
+    </form>
+    <hr>
+    <div class="history">
+        <h2>Conversation History:</h2>
+    </div>
+    {% for question, response in conversations.items() %}
+        <p class="question"><strong>You:</strong> {{ question }}</p>
+        <p class="response"><strong>AI:</strong> {{ response }}</p>
+    {% endfor %}
+</body>
+</html>
