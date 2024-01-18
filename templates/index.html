@@ -1,54 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Question Input</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
+            background-color: #f0f0f0; /* light gray background */
+            font-family: Arial, sans-serif; /* smooth font */
         }
-        form {
-            margin: 20px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
+
+        #questionForm {
+            background-color: #fff; /* white background */
+            border-radius: 5px; /* smooth corners */
+            padding: 20px; /* space around the form */
+            margin-bottom: 20px; /* space below the form */
         }
-        h2 {
-            color: #333;
+
+        #questionForm input[type="submit"] {
+            background-color: #4CAF50; /* green background */
+            color: white; /* white text */
+            border: none; /* no border */
+            border-radius: 5px; /* smooth corners */
+            cursor: pointer; /* hand cursor on hover */
+            padding: 10px 20px; /* space around the text */
         }
-        p {
-            color: #666;
-            padding-left: 20px;
+
+        #questionForm input[type="submit"]:hover {
+            background-color: #45a049; /* darker green on hover */
         }
-        .question {
-            color: #007BFF;
-        }
-        .response {
-            color: #28a745;
-        }
-        .history {
-            padding-left: 20px;  /* Add padding to the left of the text */
+
+        #response {
+            background-color: #ddd; /* light gray background */
+            border-radius: 5px; /* smooth corners */
+            padding: 20px; /* space around the text */
         }
     </style>
 </head>
+<head>
+    <title>API Call</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
 <body>
-    <div class="history">
-        <h2>Conversation History:</h2>
-        {% for question, response in conversations.items() %}
-            <p class="question"><strong>You:</strong> {{ question }}</p>
-            <p class="response"><strong>AI:</strong> {{ response }}</p>
-        {% endfor %}
-    </div>
-    <form method="POST">
-        <label for="question">Enter your question:</label><br>
+    <h1>Ask a Question</h1>
+    <form id="questionForm">
+        <label for="question">Question:</label><br>
         <input type="text" id="question" name="question"><br>
-        <input type="submit" value="Send">
+        <input type="submit" value="Submit">
     </form>
-    <form method="POST" action="/clear">
-        <input type="submit" value="Clear Conversation">
-    </form>
-    <hr>
+    <p id="response"></p>
+
+    <script>
+        $(document).ready(function(){
+            $('#questionForm').on('submit', function(e) {
+                e.preventDefault();
+                var question = $('#question').val();
+                $.ajax({
+                    url: 'http://localhost:5000/api/conversation', // replace with your API URL
+                    type: 'POST', // or 'POST', depends on your API
+                    data: { question: question },
+                    success: function(response) {
+                        $('#response').html(response);
+                    },
+                    error: function(error) {
+                        console.log(error);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

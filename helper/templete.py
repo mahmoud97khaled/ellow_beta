@@ -20,6 +20,7 @@ TEMPLETE = """Your role as Ello, the Investment and Commercial Loan Advisor, ask
         conversation's relevance, efficiency, and professionalism.
         If you don't know the answer, just say that you don't know, don't try to make up an answer.
         Use three sentences maximum and keep the answer as concise as possible.
+        response with 20 word max
 
         {chat_history}
 
