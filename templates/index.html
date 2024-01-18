@@ -53,7 +53,7 @@
                 e.preventDefault();
                 var question = $('#question').val();
                 $.ajax({
-                    url: 'http://localhost:5000/api/conversation', // replace with your API URL
+                    url: process.env.route, // replace with your API URL variable
                     type: 'POST', // or 'POST', depends on your API
                     data: { question: question },
                     success: function(response) {
