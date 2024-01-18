@@ -39,16 +39,13 @@ Session(app)
 
 conversational_qa = ConversationalQA()
 chat_history =[]
+
 @app.route('/', methods=['GET', 'POST'])
 def home():
     if 'conversations' not in session:
         session['conversations'] = {}
     if request.method == 'POST':
         question = request.form.get('question')
-        history_list = []
-        for key, value in session['conversations'].items():
-            history_list.append(HumanMessage(content=key))
-            history_list.append(value)
         response = conversational_qa.conversation({
         "question": question,
         "chat_history": chat_history

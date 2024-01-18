@@ -29,11 +29,18 @@
             color: #28a745;
         }
         .history {
-        padding-left: 20px;  /* Add padding to the left of the text */
-    }
+            padding-left: 20px;  /* Add padding to the left of the text */
+        }
     </style>
 </head>
 <body>
+    <div class="history">
+        <h2>Conversation History:</h2>
+        {% for question, response in conversations.items() %}
+            <p class="question"><strong>You:</strong> {{ question }}</p>
+            <p class="response"><strong>AI:</strong> {{ response }}</p>
+        {% endfor %}
+    </div>
     <form method="POST">
         <label for="question">Enter your question:</label><br>
         <input type="text" id="question" name="question"><br>
@@ -43,12 +50,5 @@
         <input type="submit" value="Clear Conversation">
     </form>
     <hr>
-    <div class="history">
-        <h2>Conversation History:</h2>
-    </div>
-    {% for question, response in conversations.items() %}
-        <p class="question"><strong>You:</strong> {{ question }}</p>
-        <p class="response"><strong>AI:</strong> {{ response }}</p>
-    {% endfor %}
 </body>
 </html>
