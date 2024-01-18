@@ -24,7 +24,7 @@ class ConversationalQA:
     def __init__(self):
         self.vectorstore = Chroma(persist_directory="chroma_db", embedding_function=OpenAIEmbeddings())
         self.retriever = self.vectorstore.as_retriever()
-        self.llm = ChatOpenAI(model_name="gpt-4-1106-preview", temperature=0)
+        self.llm = ChatOpenAI(model_name="gpt-4", temperature=0)
         self.template = TEMPLETE
         self.memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
         self.conversation = ConversationalRetrievalChain.from_llm(

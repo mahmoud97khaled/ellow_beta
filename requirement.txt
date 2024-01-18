@@ -4,7 +4,7 @@ chromadb
 bs4
 unstructured
 langchain-community
-"unstructured[docx]"
+unstructured[docx]
 Flask
 Flask-Session
 flask-cors
