@@ -6,7 +6,7 @@ from langchain_core.runnables import RunnablePassthrough
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_core.prompts import PromptTemplate
 
-from helper.templete import TEMPLETE
+from helper.prompt import TEMPLETE
 
 class MyChatBot:
     def __init__(self):
