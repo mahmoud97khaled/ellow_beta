@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
-loader = DirectoryLoader('data/', glob="**/*.docx", show_progress=True)
+loader = DirectoryLoader('new_data/', glob="**/*.docx", show_progress=True)
 
 docs = loader.load()
 
